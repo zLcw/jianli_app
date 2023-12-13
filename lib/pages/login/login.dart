@@ -23,12 +23,13 @@ class LoginPage extends StatelessWidget {
           child: Column(
             children: [
               const LoginLogo(),
-              loginController.codeLogin.value ?
-                LoginUserName(loginController: loginController,label: "手机号"):
-                LoginUserName(loginController: loginController,label: "账号"),
+              loginController.codeLogin.value
+                  ? LoginUserName(loginController: loginController,label: "手机号")
+                  : LoginUserName(loginController: loginController,label: "账号"),
               SizedBox(height: 40.h),
-              //LoginPassword(loginController: loginController),
-              LoginCode(),
+              loginController.codeLogin.value
+                  ? const LoginCode()
+                  : LoginPassword(loginController: loginController),
               SizedBox(height: 20.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,

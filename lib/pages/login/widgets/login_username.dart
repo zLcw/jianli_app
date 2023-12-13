@@ -13,7 +13,7 @@ class LoginUserName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 700.sp,
+      width: 700.w,
       child: TextFormField(
         initialValue: loginController.userName.value,
         autovalidateMode: AutovalidateMode.onUserInteraction,

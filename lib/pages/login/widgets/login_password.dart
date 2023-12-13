@@ -12,7 +12,7 @@ class LoginPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Obx(() => SizedBox(
-      width: 700.sp,
+      width: 700.w,
       child: TextFormField(
         obscureText: !loginController.isPasswordVisible.value,
         initialValue: loginController.password.value,
